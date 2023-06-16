@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>html相关知识</title>
+      <link href="/2023/06/15/html_1/"/>
+      <url>/2023/06/15/html_1/</url>
+      
+        <content type="html"><![CDATA[<p>这篇文章主要记录了自己在 HTML 学习的过程中遇到的知识点</p><h2 id="如何理解-HTML-的语义化"><a href="#如何理解-HTML-的语义化" class="headerlink" title="如何理解 HTML 的语义化"></a>如何理解 HTML 的语义化</h2><p>1）、让人更容易读懂代码（增加代码可读性）<br>2）、让搜索引擎更容易读懂（SEO-搜索引擎优化）<br>在此基础上列举一个简单的例子，比如说标题使用 div 和 h1，列表使用 div 和 ul、li 等的对比。</p><h2 id="默认情况下，哪些是块状元素，哪些是内联元素"><a href="#默认情况下，哪些是块状元素，哪些是内联元素" class="headerlink" title="默认情况下，哪些是块状元素，哪些是内联元素"></a>默认情况下，哪些是块状元素，哪些是内联元素</h2><p>display：block&#x2F;table div、table、h1、h2、…、ul、ol、p<br>display：inline&#x2F;inline-block span、img、input、button</p><h2 id="圣杯布局"><a href="#圣杯布局" class="headerlink" title="圣杯布局"></a>圣杯布局</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;<span class="built_in">head</span>&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">&quot;X-UA-Compatible&quot;</span> content=<span class="string">&quot;ie=edge&quot;</span>&gt;</span><br><span class="line">    &lt;title&gt;圣杯布局&lt;/title&gt;</span><br><span class="line">    &lt;style <span class="built_in">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line">        body &#123;</span><br><span class="line">            min-width: 550px;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">#header &#123;</span></span><br><span class="line">            text-align: center;</span><br><span class="line">            background-color: <span class="comment">#f1f1f1;</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#container &#123;</span></span><br><span class="line">            padding-left: 200px;</span><br><span class="line">            padding-right: 150px;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">#container .column &#123;</span></span><br><span class="line">            <span class="built_in">float</span>: left;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#center &#123;</span></span><br><span class="line">            background-color: <span class="comment">#ccc;</span></span><br><span class="line">            width: 100%;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">#left &#123;</span></span><br><span class="line">            position: relative;</span><br><span class="line">            background-color: yellow;</span><br><span class="line">            width: 200px;</span><br><span class="line">            margin-left: -100%;</span><br><span class="line">            right: 200px;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">#right &#123;</span></span><br><span class="line">            background-color: red;</span><br><span class="line">            width: 150px;</span><br><span class="line">            margin-right: -150px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#footer &#123;</span></span><br><span class="line">            text-align: center;</span><br><span class="line">            background-color: <span class="comment">#f1f1f1;</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        /* 手写 clearfix */</span><br><span class="line">        .clearfix:after &#123;</span><br><span class="line">            content: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">            display: table;</span><br><span class="line">            clear: both;</span><br><span class="line">        &#125;</span><br><span class="line">        .clearfix &#123;</span><br><span class="line">            /* 兼容IE低版本 */</span><br><span class="line">            *zoom: 1;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div <span class="built_in">id</span>=<span class="string">&quot;header&quot;</span>&gt;this is header&lt;/div&gt;</span><br><span class="line">    &lt;div <span class="built_in">id</span>=<span class="string">&quot;container&quot;</span> class=<span class="string">&quot;clearfix&quot;</span>&gt;</span><br><span class="line">        &lt;div <span class="built_in">id</span>=<span class="string">&quot;center&quot;</span> class=<span class="string">&quot;column&quot;</span>&gt;this is center&lt;/div&gt;</span><br><span class="line">        &lt;div <span class="built_in">id</span>=<span class="string">&quot;left&quot;</span> class=<span class="string">&quot;column&quot;</span>&gt;this is left&lt;/div&gt;</span><br><span class="line">        &lt;div <span class="built_in">id</span>=<span class="string">&quot;right&quot;</span> class=<span class="string">&quot;column&quot;</span>&gt;this is right&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div <span class="built_in">id</span>=<span class="string">&quot;footer&quot;</span>&gt;this is footer&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>基于Hexo搭建博客的第一篇文章</title>
+      <link href="/2023/06/15/hexo_start/"/>
+      <url>/2023/06/15/hexo_start/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
