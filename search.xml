@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>开启研究生面试的记录（1）</title>
+      <link href="/post/4eb916e2.html"/>
+      <url>/post/4eb916e2.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="面试过程"><a href="#面试过程" class="headerlink" title="面试过程"></a>面试过程</h2><pre><code>由于个人觉得找工作的时候有和没有实习经历是不一样的，所以就特别想在找正式工作之前，经历一个实习，</code></pre><p>然后就投递了一些简历（我投的时候，是挑着投的，后来有经验的人说，实习嘛，不应该追求工资，所以不<br>要挑，别人要你就行）。<br>然后今天下午收到了一个笔试链接，因为之前投递后，也会有一些链接，让你填写<br>一些类似公务员考试的那种场景题、逻辑题、还有一些工作场景中会有的问题，问你如何解决，结果这一次<br>不是，我点进去一看，只有三个题，30 分钟，我瞬间觉得是正儿八经的笔试题，但是回不去了，开着摄像头<br>呢，没办法，做吧，由于太紧张，第一个提看了七分钟还没有头绪，就想着先做后面的，然后平静下来后，<br>回来在做，结果…，人家规定提交上一个，才来做下一个，但是因为时间关系，没办法，我只能放弃第一个<br>了，后面俩个做的挺顺利的，一共 23 分钟，这时候，我想其实第一个也不难，但是没机会了，哎<br>第一个题就是让你从给定的数组中选出出现次数最多的元素，可能不止一个。看到这个题，我就想如何存<br>储每一个数字的次数，思路对，但是数据结构…，由于平时用的 java，一下就想到了 map，但是 js 有 map 吗，<br>忘了，尴尬，没办法，用数组吧，本来用数组也挺简单，紧张的不行竟然想着用两个存储，对应位置一个记录<br>数字，一个记录次数，线上的 ide，没有提示，好像有的方法也没法用，比如 indexOf，最终无疾而终</p><h2 id="正确的答案"><a href="#正确的答案" class="headerlink" title="正确的答案"></a>正确的答案</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> getReaptNums(arr) &#123;</span><br><span class="line">  <span class="built_in">let</span> res = []</span><br><span class="line">  <span class="keyword">for</span>(<span class="built_in">let</span> i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">    res[arr[i]]++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">let</span> max = 0;</span><br><span class="line">  <span class="keyword">for</span>(<span class="built_in">let</span> i = 0; i &lt; res.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>(max &lt; res[i])</span><br><span class="line">      max = res[i]</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">let</span> ans = []</span><br><span class="line">  <span class="keyword">for</span>(<span class="built_in">let</span> i = 0; i &lt; res.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>(res[i] == max)</span><br><span class="line">      ans.push(i);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML、JS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>html相关知识</title>
       <link href="/post/c4d42ff.html"/>
       <url>/post/c4d42ff.html</url>
