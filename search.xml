@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>实习生活</title>
+      <link href="/post/85d3a334.html"/>
+      <url>/post/85d3a334.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><blockquote><p>本人是在 windows11 的电脑上搭建的 hexo 博客</p><ul><li>电脑的操作系统：windows11</li><li>需要有的基础环境包括：Node、Git、一个 github 的账号</li></ul></blockquote><h2 id="Node-的环境安装以及配置"><a href="#Node-的环境安装以及配置" class="headerlink" title="Node 的环境安装以及配置"></a>Node 的环境安装以及配置</h2><pre><code>Node的环境配置相对比较简单，可以自行百度</code></pre><h2 id="Git-的安装教程"><a href="#Git-的安装教程" class="headerlink" title="Git 的安装教程"></a>Git 的安装教程</h2><pre><code>Git的安装也是比较简单的，官网下载直接next安装即可</code></pre><h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><pre><code>学习编程有一个代码的存储仓库是必须的，它可以记录你的学习过程，更好的管理代码，并且在以后的找工作的路上，通过github的提交记录过程也可以看到你的学习过程，这个是很重要的。具体的注册等步骤也可以自行百度，我在这里就不多说了，因为一个人学习编程的话，什么都会也是不现实的，所以必须学会通过各种方式解决问题，百度就是最基础的一种，如果简单的环境搭建（**我说的是简单的环境！！！**）都完成不了，可能需要考虑是否适合学习编程了</code></pre><h2 id="github-的个人博客"><a href="#github-的个人博客" class="headerlink" title="github 的个人博客"></a>github 的个人博客</h2><pre><code>每一个github的账号可以创建一个博客网站，这个仓库和其他的仓库是不一样的，也是New repository创建仓库，但是名称是：&lt;用户名&gt;.github.io，其他的步骤基本和其他仓库是一致的</code></pre><h2 id="基础的常用命令"><a href="#基础的常用命令" class="headerlink" title="基础的常用命令"></a>基础的常用命令</h2><blockquote><ul><li>git config -1 查看所有配置</li><li>git config –system –list 查看系统配置</li><li>git config –global –list 查看用户（全局）配置</li><li>git config –global user.name “你的用户名”</li><li>git config –global user.email “你的邮箱”</li></ul></blockquote><h2 id="连接-github"><a href="#连接-github" class="headerlink" title="连接 github"></a>连接 github</h2><pre><code>通常来说，对于github的仓库，如果是公开的，我们可以选择https的方式进行clone，u嗯可以选择使用ssh的方式进行clone，但是ssh的clone需要生成公钥对之后才可以</code></pre><blockquote><p>1、生成 ssh 公钥的步骤</p><ul><li>执行命令：ssh-keygen -t rsa -C “你的邮箱”。之后打开你的 C 盘用户文件夹的.ssh 文件夹就会看到 id_rsa.pub 文件</li><li>使用编辑器或者记事本打开刚才的公钥文件，复制里面的内容，在 github 中配置 ssh 密钥即可</li><li>github 配置 ssh 公钥的具体路径：进入 github -&gt; 点击右上角的头像 -&gt; 点击 settings -&gt; 选择 SSH and GPG keys 之后起个名字，粘贴复制的公钥内容即可</li><li>配置后，为了测试是否配置成功，可以执行以下命令：ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a> 之后出现 Hi xxx You’ve successfully autherticated, xxx 就说明成功了</li></ul></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo搭建步骤 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo博客平台的搭建步骤 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>实习生活</title>
+      <link href="/post/85d3a334.html"/>
+      <url>/post/85d3a334.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="实习生活"><a href="#实习生活" class="headerlink" title="实习生活"></a>实习生活</h2><p>今天</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 实习生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>开启实习生活</title>
       <link href="/post/90476360.html"/>
       <url>/post/90476360.html</url>
