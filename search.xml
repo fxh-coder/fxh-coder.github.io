@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>实习生活</title>
-      <link href="/post/85d3a334.html"/>
-      <url>/post/85d3a334.html</url>
+      <title>Hexo环境搭建-2</title>
+      <link href="/post/6c5388ba.html"/>
+      <url>/post/6c5388ba.html</url>
       
-        <content type="html"><![CDATA[<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><blockquote><p>本人是在 windows11 的电脑上搭建的 hexo 博客</p><ul><li>电脑的操作系统：windows11</li><li>需要有的基础环境包括：Node、Git、一个 github 的账号</li></ul></blockquote><h2 id="Node-的环境安装以及配置"><a href="#Node-的环境安装以及配置" class="headerlink" title="Node 的环境安装以及配置"></a>Node 的环境安装以及配置</h2><pre><code>Node的环境配置相对比较简单，可以自行百度</code></pre><h2 id="Git-的安装教程"><a href="#Git-的安装教程" class="headerlink" title="Git 的安装教程"></a>Git 的安装教程</h2><pre><code>Git的安装也是比较简单的，官网下载直接next安装即可</code></pre><h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><pre><code>学习编程有一个代码的存储仓库是必须的，它可以记录你的学习过程，更好的管理代码，并且在以后的找工作的路上，通过github的提交记录过程也可以看到你的学习过程，这个是很重要的。具体的注册等步骤也可以自行百度，我在这里就不多说了，因为一个人学习编程的话，什么都会也是不现实的，所以必须学会通过各种方式解决问题，百度就是最基础的一种，如果简单的环境搭建（**我说的是简单的环境！！！**）都完成不了，可能需要考虑是否适合学习编程了</code></pre><h2 id="github-的个人博客"><a href="#github-的个人博客" class="headerlink" title="github 的个人博客"></a>github 的个人博客</h2><pre><code>每一个github的账号可以创建一个博客网站，这个仓库和其他的仓库是不一样的，也是New repository创建仓库，但是名称是：&lt;用户名&gt;.github.io，其他的步骤基本和其他仓库是一致的</code></pre><h2 id="基础的常用命令"><a href="#基础的常用命令" class="headerlink" title="基础的常用命令"></a>基础的常用命令</h2><blockquote><ul><li>git config -1 查看所有配置</li><li>git config –system –list 查看系统配置</li><li>git config –global –list 查看用户（全局）配置</li><li>git config –global user.name “你的用户名”</li><li>git config –global user.email “你的邮箱”</li></ul></blockquote><h2 id="连接-github"><a href="#连接-github" class="headerlink" title="连接 github"></a>连接 github</h2><pre><code>通常来说，对于github的仓库，如果是公开的，我们可以选择https的方式进行clone，u嗯可以选择使用ssh的方式进行clone，但是ssh的clone需要生成公钥对之后才可以</code></pre><blockquote><p>1、生成 ssh 公钥的步骤</p><ul><li>执行命令：ssh-keygen -t rsa -C “你的邮箱”。之后打开你的 C 盘用户文件夹的.ssh 文件夹就会看到 id_rsa.pub 文件</li><li>使用编辑器或者记事本打开刚才的公钥文件，复制里面的内容，在 github 中配置 ssh 密钥即可</li><li>github 配置 ssh 公钥的具体路径：进入 github -&gt; 点击右上角的头像 -&gt; 点击 settings -&gt; 选择 SSH and GPG keys 之后起个名字，粘贴复制的公钥内容即可</li><li>配置后，为了测试是否配置成功，可以执行以下命令：ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a> 之后出现 Hi xxx You’ve successfully autherticated, xxx 就说明成功了</li></ul></blockquote>]]></content>
+        <content type="html"><![CDATA[<h2 id="初始化一个-Hexo-的项目"><a href="#初始化一个-Hexo-的项目" class="headerlink" title="初始化一个 Hexo 的项目"></a>初始化一个 Hexo 的项目</h2><blockquote><ul><li>在目标路径执行 hexo init blog-name（项目名称，自己随便命名）</li><li>进入 blog-name，输入 npm i 安装相关依赖</li></ul><p>依赖下载完成后，目录结构如下：</p><ul><li><p>node-modules：依赖包</p></li><li><p>scaffolds：生成文章的一些模板</p></li><li><p>source：用来存放你的文章</p></li><li><p>themes：主题</p></li><li><p>.npmignore：发布时忽略的文件</p></li><li><p>_config.landscape.yml：主题的配置文件</p></li><li><p>_config.yml：博客的配置文件</p></li><li><p>package.json：项目名称、描述、版本、运行和开发信息</p></li><li><p>输入 hexo server 或者 hexo s</p></li><li><p>打开浏览器，输入地址：<a href="http://localhost:4000/">http://localhost:4000/</a></p></li></ul></blockquote><h2 id="如何将静态的博客推送到-github-上"><a href="#如何将静态的博客推送到-github-上" class="headerlink" title="如何将静态的博客推送到 github 上"></a>如何将静态的博客推送到 github 上</h2><pre><code>这个推送到github上指的是将静态的博客页面推送到github创建的博客仓库上</code></pre><h3 id="安装-hexo-deployer-git"><a href="#安装-hexo-deployer-git" class="headerlink" title="安装 hexo-deployer-git"></a>安装 hexo-deployer-git</h3><pre><code>执行命令：npm install hexo-deployer-git --save</code></pre><h3 id="修改-config-yml-文件"><a href="#修改-config-yml-文件" class="headerlink" title="修改_config.yml 文件"></a>修改_config.yml 文件</h3><pre><code>在blog-name目录下的_config.yml，就是整个Hexo框架的配置文件。可以在这里面修改大部分的配置，详细配置请参考[官方配置](https://hexo.io/zh-cn/docs/configuration)修改配置文件的最后一行的配置，将repository修改为你自己的github仓库地址即可**检查自己的默认分支是不是master，这个在你创建博客仓库的时候可以看到或者后续修改，如果不是，就要修改配置文件**</code></pre><blockquote><p>具体代码如下</p></blockquote><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy</span>:</span><br><span class="line">  <span class="attr">type</span>: git</span><br><span class="line">  <span class="attr">repository</span>: git地址</span><br><span class="line">  branch：仓库的默认分支名称</span><br></pre></td></tr></table></figure><h3 id="部署项目到-github"><a href="#部署项目到-github" class="headerlink" title="部署项目到 github"></a>部署项目到 github</h3><blockquote><p>修改好配置文件后，运行如下命令，将代码部署到 github</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><blockquote><ul><li>hexo clean：删除之前生成的文件，若未生成过静态文件，可忽略此命令</li><li>hexo henerate：生成静态文章，可以用 hexo g 缩写</li><li>hexo deploy：部署文章，可以用 hexo d 缩写</li><li>命令执行完后，如果出现 deploy done，则说明部署成功了</li><li>浏览器输入地址 <a href="https://github/">https://github</a> 用户名.github.io，就可以看到博客内容了</li></ul></blockquote>]]></content>
       
       
       <categories>
@@ -20,7 +20,32 @@
       
         <tags>
             
-            <tag> hexo博客平台的搭建步骤 </tag>
+            <tag> Hexo环境搭建 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo环境搭建-1</title>
+      <link href="/post/f55ad900.html"/>
+      <url>/post/f55ad900.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><blockquote><p>本人是在 windows11 的电脑上搭建的 hexo 博客</p><ul><li>电脑的操作系统：windows11</li><li>需要有的基础环境包括：Node、Git、一个 github 的账号</li></ul></blockquote><h2 id="Node-的环境安装以及配置"><a href="#Node-的环境安装以及配置" class="headerlink" title="Node 的环境安装以及配置"></a>Node 的环境安装以及配置</h2><pre><code>Node的环境配置相对比较简单，可以自行百度</code></pre><h2 id="Git-的安装教程"><a href="#Git-的安装教程" class="headerlink" title="Git 的安装教程"></a>Git 的安装教程</h2><pre><code>Git的安装也是比较简单的，官网下载直接next安装即可</code></pre><h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><pre><code>学习编程有一个代码的存储仓库是必须的，它可以记录你的学习过程，更好的管理代码，并且在以后的找工作的路上，通过github的提交记录过程也可以看到你的学习过程，这个是很重要的。具体的注册等步骤也可以自行百度，我在这里就不多说了，因为一个人学习编程的话，什么都会也是不现实的，所以必须学会通过各种方式解决问题，百度就是最基础的一种，如果简单的环境搭建（**我说的是简单的环境！！！**）都完成不了，可能需要考虑是否适合学习编程了</code></pre><h2 id="github-的个人博客"><a href="#github-的个人博客" class="headerlink" title="github 的个人博客"></a>github 的个人博客</h2><pre><code>每一个github的账号可以创建一个博客网站，这个仓库和其他的仓库是不一样的，也是New repository创建仓库，但是名称是：&lt;用户名&gt;.github.io，其他的步骤基本和其他仓库是一致的</code></pre><h2 id="基础的常用命令"><a href="#基础的常用命令" class="headerlink" title="基础的常用命令"></a>基础的常用命令</h2><blockquote><ul><li>git config -1 查看所有配置</li><li>git config –system –list 查看系统配置</li><li>git config –global –list 查看用户（全局）配置</li><li>git config –global user.name “你的用户名”</li><li>git config –global user.email “你的邮箱”</li></ul></blockquote><h2 id="连接-github"><a href="#连接-github" class="headerlink" title="连接 github"></a>连接 github</h2><pre><code>通常来说，对于github的仓库，如果是公开的，我们可以选择https的方式进行clone，u嗯可以选择使用ssh的方式进行clone，但是ssh的clone需要生成公钥对之后才可以</code></pre><blockquote><p>1、生成 ssh 公钥的步骤</p><ul><li>执行命令：ssh-keygen -t rsa -C “你的邮箱”。之后打开你的 C 盘用户文件夹的.ssh 文件夹就会看到 id_rsa.pub 文件</li><li>使用编辑器或者记事本打开刚才的公钥文件，复制里面的内容，在 github 中配置 ssh 密钥即可</li><li>github 配置 ssh 公钥的具体路径：进入 github -&gt; 点击右上角的头像 -&gt; 点击 settings -&gt; 选择 SSH and GPG keys 之后起个名字，粘贴复制的公钥内容即可</li><li>配置后，为了测试是否配置成功，可以执行以下命令：ssh -T <a href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#103;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;</a> 之后出现 Hi xxx You’ve successfully autherticated, xxx 就说明成功了</li></ul></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo搭建步骤 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo环境搭建 </tag>
             
         </tags>
       
@@ -38,7 +63,7 @@
       
       <categories>
           
-          <category> 随笔 </category>
+          <category> 实习 </category>
           
       </categories>
       
