@@ -8,7 +8,32 @@
       <link href="/post/7da0897c.html"/>
       <url>/post/7da0897c.html</url>
       
-        <content type="html"><![CDATA[<h2 id="断点续传"><a href="#断点续传" class="headerlink" title="断点续传"></a>断点续传</h2><blockquote><p>HTTP 协议的 GET 方法，支持只请求某个资源的某一部分：</p><ul><li>206 Partial Content 部分内容响应</li><li>Range 请求的资源范围</li><li>Content-Range 响应的资源范围</li><li>在连接断开重连时，客户端只请求该资源未下载的部分，而不是重新请求整个资源，来实现断点续传</li></ul><p>分块请求资源实例：</p><ul><li>Range: bytes&#x3D;306302- ：请求这个资源从 306302 个字节到末尾的部分</li><li>Content-Range: bytes 306302-604047&#x2F;604048：响应中指示携带的是该资源的第 306302-604047 的字节，该资源共 604048 个字节</li><li>客户端通过并发的请求相同资源的不同片段，来实现对某个资源的并发分块下载。从而达到快速下载的目的。目前流行的 FlashGet 和迅雷基本都是这个原理</li></ul></blockquote><h2 id="多线程下载"><a href="#多线程下载" class="headerlink" title="多线程下载"></a>多线程下载</h2><blockquote><p>多线程下载的原理：</p><ul><li>下载工具开启多个发出 HTTP 请求的线程</li><li>每个 http 请求只请求资源文件的一部分：Content-Range: bytes 20000-40000&#x2F;47000</li><li>合并每个线程下载的文件</li></ul></blockquote>]]></content>
+        <content type="html"><![CDATA[<h3 id="js-基本数据类型"><a href="#js-基本数据类型" class="headerlink" title="js 基本数据类型"></a>js 基本数据类型</h3><pre><code>String、Number、Boolean、Undefined、Null、Object、Symbol（ES6新增）</code></pre><blockquote><ul><li>isNaN(Not a Number)：用于判断参数是否是非数字值的内置函数</li></ul></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面经总结 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面经总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>找工作的准备工作</title>
+      <link href="/post/7da0897c.html"/>
+      <url>/post/7da0897c.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="断点续传"><a href="#断点续传" class="headerlink" title="断点续传"></a>断点续传</h2><blockquote><p>HTTP 协议的 GET 方法，支持只请求某个资源的某一部分：</p><ul><li>206 Partial Content 部分内容响应</li><li>Range 请求的资源范围</li><li>Content-Range 响应的资源范围</li><li>在连接断开重连时，客户端只请求该资源未下载的部分，而不是重新请求整个资源，来实现断点续传</li></ul><p>分块请求资源实例：</p><ul><li>Range: bytes&#x3D;306302- ：请求这个资源从 306302 个字节到末尾的部分</li><li>Content-Range: bytes 306302-604047&#x2F;604048：响应中指示携带的是该资源的第 306302-604047 的字节，该资源共 604048 个字节</li><li>客户端通过并发的请求相同资源的不同片段，来实现对某个资源的并发分块下载。从而达到快速下载的目的。目前流行的 FlashGet 和迅雷基本都是这个原理</li></ul></blockquote><h2 id="多线程下载"><a href="#多线程下载" class="headerlink" title="多线程下载"></a>多线程下载</h2><blockquote><p>多线程下载的原理：</p><ul><li>下载工具开启多个发出 HTTP 请求的线程</li><li>每个 http 请求只请求资源文件的一部分：Content-Range: bytes 20000-40000&#x2F;47000</li><li>合并每个线程下载的文件</li></ul></blockquote><h2 id="为什么-js-是单线程"><a href="#为什么-js-是单线程" class="headerlink" title="为什么 js 是单线程"></a>为什么 js 是单线程</h2><pre><code>设计为单线程是与其用途有关的，作为浏览器脚本语言，js的主要用途就是用户交互，以及操作DOM，这就决定了只能是单线程的，否则会带来很多复杂的同步问题。比如，一个线程删除了一个DOM节点，一个在该节点上添加了内容，浏览器应该以哪个线程为准呢？所以，为了避免复杂性，js从诞生就是单线程，浏览器中js执行和DOM渲染共用一个线程</code></pre><h2 id="同步任务、异步任务、宏任务、微任务"><a href="#同步任务、异步任务、宏任务、微任务" class="headerlink" title="同步任务、异步任务、宏任务、微任务"></a>同步任务、异步任务、宏任务、微任务</h2><blockquote><p>同步任务：按照代码的顺序依次执行，会阻塞代码的执行，直到任务完成才会执行下一条语句。常见的同步任务：变量赋值、函数调用、循环、同步文件读写等<br>异步任务：执行过程中不会阻塞其代码执行，会被提交给其他部分（浏览器环境或者操作系统），不会立即返回结果。常见的异步任务：Promise、async&#x2F;await 等</p></blockquote><h3 id="异步任务又分为宏任务和微任务"><a href="#异步任务又分为宏任务和微任务" class="headerlink" title="异步任务又分为宏任务和微任务"></a>异步任务又分为宏任务和微任务</h3><blockquote><p>常见的宏任务：script 标签中的代码、setTimeout、setInterval、setImmediate（NodeJS）、IO、UI 渲染、MessageChannel<br>常见的微任务：Promise.then（不是 new Promise）、async&#x2F;await、process.nextTick（NodeJS）、Object.observe、MutationObserver</p></blockquote><pre><code>整体的执行顺序：先同步 -&gt; 在异步 -&gt; 异步中先微任务 -&gt; 在宏任务</code></pre><table><thead><tr><th></th><th>宏任务</th><th>微任务</th></tr></thead><tbody><tr><td>通信</td><td>通过操作系统提供的机制进行进程间通信</td><td>可以直接读写共享的内存，更方便进行线程间的通信</td></tr><tr><td>资源开销</td><td>创建和维护进程的开销相对较大</td><td>创建和维护线程的开销相对较小</td></tr><tr><td>安全性</td><td>进程间的数据相互隔离，安全性较高</td><td>线程考虑数据同步和互斥问题</td></tr></tbody></table>]]></content>
       
       
       <categories>
