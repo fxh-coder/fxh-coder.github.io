@@ -5,10 +5,10 @@
     
     <entry>
       <title>找工作的准备工作</title>
-      <link href="/post/4e2df1a8.html"/>
-      <url>/post/4e2df1a8.html</url>
+      <link href="/post/cff5a4e9.html"/>
+      <url>/post/cff5a4e9.html</url>
       
-        <content type="html"><![CDATA[<h2 id="前端出现白屏的原因以及解决办法"><a href="#前端出现白屏的原因以及解决办法" class="headerlink" title="前端出现白屏的原因以及解决办法"></a>前端出现白屏的原因以及解决办法</h2><h3 id="js-问题"><a href="#js-问题" class="headerlink" title="js 问题"></a>js 问题</h3><pre><code>常用框架Vue React Angular都是依靠JS进行驱动， 并且单页面的应用html也是依靠JS生成，在渲染页面的时候需要加载很大的JS文件( app.js 和vendor.js )，在JS解析加载完成之前无法展示页面，从而导致了白屏（当网速不佳的时候也会产生一定程度的白屏）</code></pre><h3 id="浏览器兼容问题"><a href="#浏览器兼容问题" class="headerlink" title="浏览器兼容问题"></a>浏览器兼容问题</h3><pre><code>vue代码在ie中显示白屏</code></pre><h3 id="URL-网址无效或者含有中文字符"><a href="#URL-网址无效或者含有中文字符" class="headerlink" title="URL 网址无效或者含有中文字符"></a>URL 网址无效或者含有中文字符</h3><h3 id="缓存导致"><a href="#缓存导致" class="headerlink" title="缓存导致"></a>缓存导致</h3><pre><code>vue项目打包后，在非首次线上替换dist文件时，某些手机/浏览器在之后首次打开页面，可能出现白屏情况原因：在用户端会默认缓存index.html入口文件，而由于vue打包生成的css/js都是哈希值，跟上次的文件名都不同，因此会出现找不到css/js的情况，导致白屏的产生。在服务端更新包之后，由于旧的文件被删除，而index.html所链接的路径依然是旧文件路径，因此会找不到文件，从而白屏</code></pre><h3 id="页面报错"><a href="#页面报错" class="headerlink" title="页面报错"></a>页面报错</h3>]]></content>
+        <content type="html"><![CDATA[<h2 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h2><blockquote><ul><li>减少 http 请求次数：可以使用雪碧图、图片压缩等方式，减少静态资源的 http 请求次数</li><li>使用浏览器缓存，可以减少请求时间，提高页面加载速度</li><li>使用 CDN 加速，使用 CDN 将静态资源分发到多个节点，减少请求延迟，提高页面加载速度</li><li>延迟加载组件：对于一些比较耗时的组件，可以使用懒加载的方式，等到用户需要的时候在加载，避免在页面加载时一次性请求过多资源导致页面卡顿</li><li>使用 webpack 进行打包和压缩：webpack 可以将多个 js、css 文件打包成一个文件，减少 Http 请求次数；同时还可以进行代码压缩，减少文件大小，提高页面加载速度</li><li>使用 Web Workers：对于一些计算精密型任务，可以使用 Web Workers 将任务分发到多个线程中，提高运算效率，避免页面卡顿</li><li>优化 js 代码：减少页面运行时间，提高页面性能。一些常见的优化操作：避免使用全局变量、减少 DOM 操作、避免不必要的循环、缓存.length 的值：每次.length 计算使用一个变量保存值、尽量使用事件委托：不给每个子节点单独设置事件监听器，而是设置在其父节点上，然后利用冒泡原理设置每个子节点，避免批量绑定事件以此来减少内存消耗和 DOM 操作等</li><li>使用响应式布局：适应不同的屏幕，提高用户体验，避免出现滚动条等不必要的元素</li><li>使用 css3 动画：减少对 js 的依赖，提高动画效果的性能</li><li>使用服务端渲染：将页面的渲染放在服务端完成，减少客户端的渲染时间，提高页面性能</li><li>避免 img、iframe 的 src 属性为空，为空会重新加载当前页面，影响速度和性能</li><li>图片避免使用 DataURL：DataURL 图像没有使用图像压缩算法，文件会变大，并且要解码后在渲染，加载慢耗时长</li><li>减少不必要的 cookie：Cookie 存储在客户端，伴随着 HTTP 请求在浏览器和服务器之间传递，由于 cookie 在访问对应域名下的资源时都会通过 HTTP 请求发送到服务器，从而会影响加载速度，所以尽量减少不必要的 Cookie</li></ul></blockquote>]]></content>
       
       
       <categories>
@@ -21,6 +21,31 @@
         <tags>
             
             <tag> 面经总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>找工作的准备工作</title>
+      <link href="/post/4e2df1a8.html"/>
+      <url>/post/4e2df1a8.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="前端出现白屏的原因"><a href="#前端出现白屏的原因" class="headerlink" title="前端出现白屏的原因"></a>前端出现白屏的原因</h2><h3 id="js-问题"><a href="#js-问题" class="headerlink" title="js 问题"></a>js 问题</h3><pre><code>常用框架Vue React Angular都是依靠JS进行驱动， 并且单页面的应用html也是依靠JS生成，在渲染页面的时候需要加载很大的JS文件( app.js 和vendor.js )，在JS解析加载完成之前无法展示页面，从而导致了白屏（当网速不佳的时候也会产生一定程度的白屏）</code></pre><h3 id="浏览器兼容问题"><a href="#浏览器兼容问题" class="headerlink" title="浏览器兼容问题"></a>浏览器兼容问题</h3><pre><code>vue代码在ie中显示白屏</code></pre><h3 id="URL-网址无效或者含有中文字符"><a href="#URL-网址无效或者含有中文字符" class="headerlink" title="URL 网址无效或者含有中文字符"></a>URL 网址无效或者含有中文字符</h3><h3 id="缓存导致"><a href="#缓存导致" class="headerlink" title="缓存导致"></a>缓存导致</h3><pre><code>vue项目打包后，在非首次线上替换dist文件时，某些手机/浏览器在之后首次打开页面，可能出现白屏情况原因：在用户端会默认缓存index.html入口文件，而由于vue打包生成的css/js都是哈希值，跟上次的文件名都不同，因此会出现找不到css/js的情况，导致白屏的产生。在服务端更新包之后，由于旧的文件被删除，而index.html所链接的路径依然是旧文件路径，因此会找不到文件，从而白屏</code></pre><h3 id="页面报错"><a href="#页面报错" class="headerlink" title="页面报错"></a>页面报错</h3><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><pre><code>思路：较小打包后的体积（sourceMap关掉、CDN引入、路由懒加载、组件按需加载）</code></pre><h3 id="CDN-资源优化"><a href="#CDN-资源优化" class="headerlink" title="CDN 资源优化"></a>CDN 资源优化</h3><blockquote><ul><li>将依赖的第三方 npm 包全部改为通过 CDN 链接获取，在 html 中插入相应链接</li><li>在 vue.config.js 中配置 externals 属性</li><li>卸载相关依赖的 npm 包：npm uninstall xxx</li></ul></blockquote><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    ···</span><br><span class="line">    <span class="attr">externals</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;vue&#x27;</span>: <span class="string">&#x27;Vue&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;vuex&#x27;</span>: <span class="string">&#x27;Vuex&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;vue-router&#x27;</span>: <span class="string">&#x27;VueRouter&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;axios&#x27;</span>:<span class="string">&#x27;axios&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;element-ui&#x27;</span>: <span class="string">&#x27;ElementUI&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="使用-gzip-压缩"><a href="#使用-gzip-压缩" class="headerlink" title="使用 gzip 压缩"></a>使用 gzip 压缩</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 前端处理</span></span><br><span class="line"><span class="comment">// npm i compression-webpack-plugin -S</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">CompressionPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;compression-webpack-plugin&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line"><span class="attr">productionSourceMap</span>: <span class="literal">false</span>,</span><br><span class="line"><span class="attr">configureWebpack</span>: <span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line"><span class="keyword">if</span> (process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&#x27;production&#x27;</span>) &#123;</span><br><span class="line"><span class="keyword">return</span> &#123;</span><br><span class="line"><span class="attr">plugins</span>: [</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">CompressionPlugin</span>(&#123;</span><br><span class="line"><span class="comment">// 匹配规格</span></span><br><span class="line"><span class="attr">test</span>: <span class="regexp">/\.js$|\.html$|\.css$|\.png$/</span>,</span><br><span class="line"><span class="comment">// 文件超过多大进行压缩 单位Byte</span></span><br><span class="line"><span class="attr">threshold</span>: <span class="number">10240</span>,</span><br><span class="line"><span class="comment">// 是否删除源文件（建议不删除）</span></span><br><span class="line"><span class="attr">deleteOriginalAssets</span>: <span class="literal">false</span></span><br><span class="line">&#125;)</span><br><span class="line">],</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 还需要在 nginx开启gzip压缩</span></span><br><span class="line">gzip on;</span><br><span class="line"><span class="comment">// 当存在.gzip格式的js文件时，优先使用静态文件</span></span><br><span class="line">gzip_static on;</span><br><span class="line"><span class="comment">// 开启gzip压缩的最小大小</span></span><br><span class="line">gzip_min_length  10k;</span><br><span class="line">gzip_buffers     <span class="number">4</span> 16k;</span><br><span class="line">gzip_http_version <span class="number">1.1</span>;</span><br><span class="line">gzip_comp_level <span class="number">6</span>;</span><br><span class="line">gzip_types     text/plain application/javascript application/x-javascript text/javascript text/css application/xml;</span><br><span class="line">gzip_vary on;</span><br><span class="line">gzip_proxied   expired no-cache no-store private auth;</span><br><span class="line">gzip_disable   <span class="string">&quot;MSIE [1-6]\.&quot;</span>;</span><br></pre></td></tr></table></figure><p><strong>当 nginx 开启 gzip 压缩的时候，无论前端打包出来的文件是否压缩，网站加载到的 js 文件都是经过 nginx 实时压缩过的</strong></p><pre><code>当gzip_static off的时候，前端上传的js压缩文件（gzip格式那些）并没有什么用。当gzip_static on时，优先加载前端打包的gzip压缩文件，如果没有找到该文件，那么nginx将实时压缩之后传给浏览器</code></pre><h3 id="SSR-服务端渲染"><a href="#SSR-服务端渲染" class="headerlink" title="SSR 服务端渲染"></a>SSR 服务端渲染</h3><pre><code>首页加loading或骨架屏（elementU有骨架屏组件：Skeleton），所谓的骨架屏，就是在页面内容未加载完成的时候，先使用一些图形进行占位，待内容加载完成之后再把它替换掉。在这个过程中用户会感知到内容正在逐渐加载并即将呈现，降低了“白屏”的不良体验</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> job Prepare </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> job prepare </tag>
             
         </tags>
       
@@ -38,14 +63,14 @@
       
       <categories>
           
-          <category> 面经总结 </category>
+          <category> job Prepare </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 面经总结 </tag>
+            <tag> job prepare </tag>
             
         </tags>
       
@@ -63,14 +88,14 @@
       
       <categories>
           
-          <category> 面经总结 </category>
+          <category> job Prepare </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 面经总结 </tag>
+            <tag> job prepare </tag>
             
         </tags>
       
@@ -88,14 +113,14 @@
       
       <categories>
           
-          <category> 面经总结 </category>
+          <category> job Prepare </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 面经总结 </tag>
+            <tag> job prepare </tag>
             
         </tags>
       
@@ -113,14 +138,14 @@
       
       <categories>
           
-          <category> 面经总结 </category>
+          <category> job Prepare </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 面经总结 </tag>
+            <tag> job prepare </tag>
             
         </tags>
       
@@ -138,14 +163,14 @@
       
       <categories>
           
-          <category> 面经总结 </category>
+          <category> job Prepare </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 面经总结 </tag>
+            <tag> job prepare </tag>
             
         </tags>
       
@@ -188,14 +213,14 @@
       
       <categories>
           
-          <category> 面经总结 </category>
+          <category> job Prepare </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 面经总结 </tag>
+            <tag> job prepare </tag>
             
         </tags>
       
@@ -358,7 +383,7 @@
       <link href="/post/f55ad900.html"/>
       <url>/post/f55ad900.html</url>
       
-        <content type="html"><![CDATA[<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><blockquote><p>本人是在 windows11 的电脑上搭建的 hexo 博客</p><ul><li>电脑的操作系统：windows11</li><li>需要有的基础环境包括：Node、Git、一个 github 的账号</li></ul></blockquote><h2 id="Node-的环境安装以及配置"><a href="#Node-的环境安装以及配置" class="headerlink" title="Node 的环境安装以及配置"></a>Node 的环境安装以及配置</h2><pre><code>Node的环境配置相对比较简单，可以自行百度</code></pre><h2 id="Git-的安装教程"><a href="#Git-的安装教程" class="headerlink" title="Git 的安装教程"></a>Git 的安装教程</h2><pre><code>Git的安装也是比较简单的，官网下载直接next安装即可</code></pre><h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><pre><code>学习编程有一个代码的存储仓库是必须的，它可以记录你的学习过程，更好的管理代码，并且在以后的找工作的路上，通过github的提交记录过程也可以看到你的学习过程，这个是很重要的。具体的注册等步骤也可以自行百度，我在这里就不多说了，因为一个人学习编程的话，什么都会也是不现实的，所以必须学会通过各种方式解决问题，百度就是最基础的一种，如果简单的环境搭建（**我说的是简单的环境！！！**）都完成不了，可能需要考虑是否适合学习编程了</code></pre><h2 id="github-的个人博客"><a href="#github-的个人博客" class="headerlink" title="github 的个人博客"></a>github 的个人博客</h2><pre><code>每一个github的账号可以创建一个博客网站，这个仓库和其他的仓库是不一样的，也是New repository创建仓库，但是名称是：&lt;用户名&gt;.github.io，其他的步骤基本和其他仓库是一致的</code></pre><h2 id="基础的常用命令"><a href="#基础的常用命令" class="headerlink" title="基础的常用命令"></a>基础的常用命令</h2><blockquote><ul><li>git config -1 查看所有配置</li><li>git config –system –list 查看系统配置</li><li>git config –global –list 查看用户（全局）配置</li><li>git config –global user.name “你的用户名”</li><li>git config –global user.email “你的邮箱”</li></ul></blockquote><h2 id="连接-github"><a href="#连接-github" class="headerlink" title="连接 github"></a>连接 github</h2><pre><code>通常来说，对于github的仓库，如果是公开的，我们可以选择https的方式进行clone，u嗯可以选择使用ssh的方式进行clone，但是ssh的clone需要生成公钥对之后才可以</code></pre><blockquote><p>1、生成 ssh 公钥的步骤</p><ul><li>执行命令：ssh-keygen -t rsa -C “你的邮箱”。之后打开你的 C 盘用户文件夹的.ssh 文件夹就会看到 id_rsa.pub 文件</li><li>使用编辑器或者记事本打开刚才的公钥文件，复制里面的内容，在 github 中配置 ssh 密钥即可</li><li>github 配置 ssh 公钥的具体路径：进入 github -&gt; 点击右上角的头像 -&gt; 点击 settings -&gt; 选择 SSH and GPG keys 之后起个名字，粘贴复制的公钥内容即可</li><li>配置后，为了测试是否配置成功，可以执行以下命令：ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a> 之后出现 Hi xxx You’ve successfully autherticated, xxx 就说明成功了</li></ul></blockquote>]]></content>
+        <content type="html"><![CDATA[<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><blockquote><p>本人是在 windows11 的电脑上搭建的 hexo 博客</p><ul><li>电脑的操作系统：windows11</li><li>需要有的基础环境包括：Node、Git、一个 github 的账号</li></ul></blockquote><h2 id="Node-的环境安装以及配置"><a href="#Node-的环境安装以及配置" class="headerlink" title="Node 的环境安装以及配置"></a>Node 的环境安装以及配置</h2><pre><code>Node的环境配置相对比较简单，可以自行百度</code></pre><h2 id="Git-的安装教程"><a href="#Git-的安装教程" class="headerlink" title="Git 的安装教程"></a>Git 的安装教程</h2><pre><code>Git的安装也是比较简单的，官网下载直接next安装即可</code></pre><h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><pre><code>学习编程有一个代码的存储仓库是必须的，它可以记录你的学习过程，更好的管理代码，并且在以后的找工作的路上，通过github的提交记录过程也可以看到你的学习过程，这个是很重要的。具体的注册等步骤也可以自行百度，我在这里就不多说了，因为一个人学习编程的话，什么都会也是不现实的，所以必须学会通过各种方式解决问题，百度就是最基础的一种，如果简单的环境搭建（**我说的是简单的环境！！！**）都完成不了，可能需要考虑是否适合学习编程了</code></pre><h2 id="github-的个人博客"><a href="#github-的个人博客" class="headerlink" title="github 的个人博客"></a>github 的个人博客</h2><pre><code>每一个github的账号可以创建一个博客网站，这个仓库和其他的仓库是不一样的，也是New repository创建仓库，但是名称是：&lt;用户名&gt;.github.io，其他的步骤基本和其他仓库是一致的</code></pre><h2 id="基础的常用命令"><a href="#基础的常用命令" class="headerlink" title="基础的常用命令"></a>基础的常用命令</h2><blockquote><ul><li>git config -1 查看所有配置</li><li>git config –system –list 查看系统配置</li><li>git config –global –list 查看用户（全局）配置</li><li>git config –global user.name “你的用户名”</li><li>git config –global user.email “你的邮箱”</li></ul></blockquote><h2 id="连接-github"><a href="#连接-github" class="headerlink" title="连接 github"></a>连接 github</h2><pre><code>通常来说，对于github的仓库，如果是公开的，我们可以选择https的方式进行clone，u嗯可以选择使用ssh的方式进行clone，但是ssh的clone需要生成公钥对之后才可以</code></pre><blockquote><p>1、生成 ssh 公钥的步骤</p><ul><li>执行命令：ssh-keygen -t rsa -C “你的邮箱”。之后打开你的 C 盘用户文件夹的.ssh 文件夹就会看到 id_rsa.pub 文件</li><li>使用编辑器或者记事本打开刚才的公钥文件，复制里面的内容，在 github 中配置 ssh 密钥即可</li><li>github 配置 ssh 公钥的具体路径：进入 github -&gt; 点击右上角的头像 -&gt; 点击 settings -&gt; 选择 SSH and GPG keys 之后起个名字，粘贴复制的公钥内容即可</li><li>配置后，为了测试是否配置成功，可以执行以下命令：ssh -T <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#109;">&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#109;</a> 之后出现 Hi xxx You’ve successfully autherticated, xxx 就说明成功了</li></ul></blockquote>]]></content>
       
       
       <categories>
