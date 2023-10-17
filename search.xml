@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>找工作的准备工作</title>
+      <link href="/post/e2763e48.html"/>
+      <url>/post/e2763e48.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="概念题"><a href="#概念题" class="headerlink" title="概念题"></a>概念题</h2><h3 id="js-实现动画与-css-实现动画相比的优缺点"><a href="#js-实现动画与-css-实现动画相比的优缺点" class="headerlink" title="js 实现动画与 css 实现动画相比的优缺点"></a>js 实现动画与 css 实现动画相比的优缺点</h3><blockquote><p>JS 动画：</p><ul><li>缺点：1.JS 在浏览器的主线程中运行，而主线程还有其他的 js 脚本，样式布局，绘制任务等，对其干扰可能导致线程出现阻塞，从而造成丢帧的情况。</li><li>2.JS 动画代码复杂度高于 CSS3 动画。</li><li>优点：1.JS 动画控制能力很强，可以在动画播放过程中对动画进行控制，使其开始或停止。</li><li>2.动画效果比 CSS3 动画丰富，有些动画只有 JS 动画才能实现，比如曲线运动，冲击闪烁等。</li><li>3.CSS3 有兼容性问题，而 JS 大多时候没有兼容性问题。</li></ul><p>CSS3 动画：</p><ul><li>缺点：1.运行过程较弱，无法附加绑定回调函数，CSS3 动画只能暂停，不能在动画中寻找一个特定的事件点，不能在半路反转动画，不能变换事件尺度，不能在特定的位置添加回调函数或是绑定回放事件，无进度报告。</li><li>2.代码冗长。想用 CSS3 实现稍微复杂一点的动画，最后 CSS 代码都会变得特别笨重。</li><li>优点：1.浏览器可以对动画进行优化。</li></ul></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面经总结 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面经总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>找工作刷题过程中做错的题</title>
       <link href="/post/ca052ad5.html"/>
       <url>/post/ca052ad5.html</url>
@@ -708,7 +733,7 @@
       <link href="/post/f55ad900.html"/>
       <url>/post/f55ad900.html</url>
       
-        <content type="html"><![CDATA[<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><blockquote><p>本人是在 windows11 的电脑上搭建的 hexo 博客</p><ul><li>电脑的操作系统：windows11</li><li>需要有的基础环境包括：Node、Git、一个 github 的账号</li></ul></blockquote><h2 id="Node-的环境安装以及配置"><a href="#Node-的环境安装以及配置" class="headerlink" title="Node 的环境安装以及配置"></a>Node 的环境安装以及配置</h2><pre><code>Node的环境配置相对比较简单，可以自行百度</code></pre><h2 id="Git-的安装教程"><a href="#Git-的安装教程" class="headerlink" title="Git 的安装教程"></a>Git 的安装教程</h2><pre><code>Git的安装也是比较简单的，官网下载直接next安装即可</code></pre><h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><pre><code>学习编程有一个代码的存储仓库是必须的，它可以记录你的学习过程，更好的管理代码，并且在以后的找工作的路上，通过github的提交记录过程也可以看到你的学习过程，这个是很重要的。具体的注册等步骤也可以自行百度，我在这里就不多说了，因为一个人学习编程的话，什么都会也是不现实的，所以必须学会通过各种方式解决问题，百度就是最基础的一种，如果简单的环境搭建（**我说的是简单的环境！！！**）都完成不了，可能需要考虑是否适合学习编程了</code></pre><h2 id="github-的个人博客"><a href="#github-的个人博客" class="headerlink" title="github 的个人博客"></a>github 的个人博客</h2><pre><code>每一个github的账号可以创建一个博客网站，这个仓库和其他的仓库是不一样的，也是New repository创建仓库，但是名称是：&lt;用户名&gt;.github.io，其他的步骤基本和其他仓库是一致的</code></pre><h2 id="基础的常用命令"><a href="#基础的常用命令" class="headerlink" title="基础的常用命令"></a>基础的常用命令</h2><blockquote><ul><li>git config -1 查看所有配置</li><li>git config –system –list 查看系统配置</li><li>git config –global –list 查看用户（全局）配置</li><li>git config –global user.name “你的用户名”</li><li>git config –global user.email “你的邮箱”</li></ul></blockquote><h2 id="连接-github"><a href="#连接-github" class="headerlink" title="连接 github"></a>连接 github</h2><pre><code>通常来说，对于github的仓库，如果是公开的，我们可以选择https的方式进行clone，u嗯可以选择使用ssh的方式进行clone，但是ssh的clone需要生成公钥对之后才可以</code></pre><blockquote><p>1、生成 ssh 公钥的步骤</p><ul><li>执行命令：ssh-keygen -t rsa -C “你的邮箱”。之后打开你的 C 盘用户文件夹的.ssh 文件夹就会看到 id_rsa.pub 文件</li><li>使用编辑器或者记事本打开刚才的公钥文件，复制里面的内容，在 github 中配置 ssh 密钥即可</li><li>github 配置 ssh 公钥的具体路径：进入 github -&gt; 点击右上角的头像 -&gt; 点击 settings -&gt; 选择 SSH and GPG keys 之后起个名字，粘贴复制的公钥内容即可</li><li>配置后，为了测试是否配置成功，可以执行以下命令：ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#64;&#103;&#x69;&#116;&#104;&#x75;&#98;&#46;&#99;&#x6f;&#109;">&#x67;&#x69;&#x74;&#64;&#103;&#x69;&#116;&#104;&#x75;&#98;&#46;&#99;&#x6f;&#109;</a> 之后出现 Hi xxx You’ve successfully autherticated, xxx 就说明成功了</li></ul></blockquote>]]></content>
+        <content type="html"><![CDATA[<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><blockquote><p>本人是在 windows11 的电脑上搭建的 hexo 博客</p><ul><li>电脑的操作系统：windows11</li><li>需要有的基础环境包括：Node、Git、一个 github 的账号</li></ul></blockquote><h2 id="Node-的环境安装以及配置"><a href="#Node-的环境安装以及配置" class="headerlink" title="Node 的环境安装以及配置"></a>Node 的环境安装以及配置</h2><pre><code>Node的环境配置相对比较简单，可以自行百度</code></pre><h2 id="Git-的安装教程"><a href="#Git-的安装教程" class="headerlink" title="Git 的安装教程"></a>Git 的安装教程</h2><pre><code>Git的安装也是比较简单的，官网下载直接next安装即可</code></pre><h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><pre><code>学习编程有一个代码的存储仓库是必须的，它可以记录你的学习过程，更好的管理代码，并且在以后的找工作的路上，通过github的提交记录过程也可以看到你的学习过程，这个是很重要的。具体的注册等步骤也可以自行百度，我在这里就不多说了，因为一个人学习编程的话，什么都会也是不现实的，所以必须学会通过各种方式解决问题，百度就是最基础的一种，如果简单的环境搭建（**我说的是简单的环境！！！**）都完成不了，可能需要考虑是否适合学习编程了</code></pre><h2 id="github-的个人博客"><a href="#github-的个人博客" class="headerlink" title="github 的个人博客"></a>github 的个人博客</h2><pre><code>每一个github的账号可以创建一个博客网站，这个仓库和其他的仓库是不一样的，也是New repository创建仓库，但是名称是：&lt;用户名&gt;.github.io，其他的步骤基本和其他仓库是一致的</code></pre><h2 id="基础的常用命令"><a href="#基础的常用命令" class="headerlink" title="基础的常用命令"></a>基础的常用命令</h2><blockquote><ul><li>git config -1 查看所有配置</li><li>git config –system –list 查看系统配置</li><li>git config –global –list 查看用户（全局）配置</li><li>git config –global user.name “你的用户名”</li><li>git config –global user.email “你的邮箱”</li></ul></blockquote><h2 id="连接-github"><a href="#连接-github" class="headerlink" title="连接 github"></a>连接 github</h2><pre><code>通常来说，对于github的仓库，如果是公开的，我们可以选择https的方式进行clone，u嗯可以选择使用ssh的方式进行clone，但是ssh的clone需要生成公钥对之后才可以</code></pre><blockquote><p>1、生成 ssh 公钥的步骤</p><ul><li>执行命令：ssh-keygen -t rsa -C “你的邮箱”。之后打开你的 C 盘用户文件夹的.ssh 文件夹就会看到 id_rsa.pub 文件</li><li>使用编辑器或者记事本打开刚才的公钥文件，复制里面的内容，在 github 中配置 ssh 密钥即可</li><li>github 配置 ssh 公钥的具体路径：进入 github -&gt; 点击右上角的头像 -&gt; 点击 settings -&gt; 选择 SSH and GPG keys 之后起个名字，粘贴复制的公钥内容即可</li><li>配置后，为了测试是否配置成功，可以执行以下命令：ssh -T <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#111;&#109;">&#103;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#111;&#109;</a> 之后出现 Hi xxx You’ve successfully autherticated, xxx 就说明成功了</li></ul></blockquote>]]></content>
       
       
       <categories>
