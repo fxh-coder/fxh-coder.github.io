@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>找工作刷题过程中做错的题</title>
+      <link href="/post/ca717658.html"/>
+      <url>/post/ca717658.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="运算器的主要功能"><a href="#运算器的主要功能" class="headerlink" title="运算器的主要功能"></a>运算器的主要功能</h3><pre><code>运算器的主要功能：加、减、乘、除四则运算，与、或、非、异或等逻辑操作，以及移位、比较和传送等操作</code></pre><h3 id="唯一标识一个进程需要"><a href="#唯一标识一个进程需要" class="headerlink" title="唯一标识一个进程需要"></a>唯一标识一个进程需要</h3><pre><code>网络上唯一标识主机上的一个进程需要用一个二元组，即IP地址和端口的组合</code></pre><h3 id="用户界面事件是较高级事件吗"><a href="#用户界面事件是较高级事件吗" class="headerlink" title="用户界面事件是较高级事件吗"></a>用户界面事件是较高级事件吗</h3><pre><code>是</code></pre><h3 id="Javascript-事件"><a href="#Javascript-事件" class="headerlink" title="Javascript 事件"></a>Javascript 事件</h3><blockquote><p>JavaScript 事件分为三个阶段：</p><ul><li>捕获阶段：事件从父元素开始向目标元素传播，从 Window 对象开始传播</li><li>目标阶段：该事件到达目标元素或开始该事件的元素</li><li>冒泡阶段：这时与捕获阶段相反，事件向父元素传播，直到 Window 对象</li></ul></blockquote><p><strong>捕获阶段： 最先调用的是 Window 对象上注册的捕获处理程序，然后调用 Document 对象的捕获处理程序，接着是 <body>元素，沿着 DOM 树一直向下，直到事件目标元素的捕获事件处理程序被调用</strong><br><strong>冒泡阶段： 注册在元素上的事件处理程序被调用后，多数事件都会沿着 DOM 树向上“冒泡”，但到 Document 对象就会停止冒泡，不会传播到 Window 对象</strong></p><h3 id="TCP-x2F-IP-传输层不能提供无连接服务"><a href="#TCP-x2F-IP-传输层不能提供无连接服务" class="headerlink" title="TCP&#x2F;IP 传输层不能提供无连接服务"></a>TCP&#x2F;IP 传输层不能提供无连接服务</h3><pre><code>错</code></pre><h3 id="哪种声明是错误的"><a href="#哪种声明是错误的" class="headerlink" title="哪种声明是错误的"></a>哪种声明是错误的</h3><pre><code>    var a = &#123;&#125; | () | (1, 2) | //  var a = () 是错误的</code></pre><h3 id="关闭浏览器后，可以使用-max-age-延长-cookie-的有效期吗"><a href="#关闭浏览器后，可以使用-max-age-延长-cookie-的有效期吗" class="headerlink" title="关闭浏览器后，可以使用 max-age 延长 cookie 的有效期吗"></a>关闭浏览器后，可以使用 max-age 延长 cookie 的有效期吗</h3><pre><code>    可以</code></pre><h3 id="编译程序的作用"><a href="#编译程序的作用" class="headerlink" title="编译程序的作用"></a>编译程序的作用</h3><pre><code>    编译程序（Compiler，compiling program），也称为编译器，是指把用高级程序设计语言书写的源程序，翻译成等价的机器语言格式目标程序的翻译程序</code></pre><h3 id="input-的-type-属性可取值"><a href="#input-的-type-属性可取值" class="headerlink" title="input 的 type 属性可取值"></a>input 的 type 属性可取值</h3><pre><code>    text、password、file、button、**image**、checkbox、radio、hidden、submit、reset、number、tel、email、time、color、search、url</code></pre><h3 id="类和原型"><a href="#类和原型" class="headerlink" title="类和原型"></a>类和原型</h3><pre><code>    在JavaScript中，类的所有实例对象都从**同一个原型对象上**继承属性。因此，**原型对象是类的唯一标识**</code></pre><h3 id="Array-of"><a href="#Array-of" class="headerlink" title="Array.of"></a>Array.of</h3><pre><code>    Array.of() 方法会创建一个包含任意数量元素的新数组。它与传统的 Array() 构造函数的区别在于，如果传递的参数是单个数字或字符串，那么 Array() 会将其作为数组的长度来使用，而 Array.of() 总是会将参数作为数组元素来使用</code></pre><h3 id="依据所有数据成员之间逻辑关系的不同，数据结构分为（-）"><a href="#依据所有数据成员之间逻辑关系的不同，数据结构分为（-）" class="headerlink" title="依据所有数据成员之间逻辑关系的不同，数据结构分为（ ）"></a>依据所有数据成员之间逻辑关系的不同，数据结构分为（ ）</h3><pre><code>    线性结构和非线性结构</code></pre><h3 id="如何规避-javascript-多人开发函数重名问题"><a href="#如何规避-javascript-多人开发函数重名问题" class="headerlink" title="如何规避 javascript 多人开发函数重名问题"></a>如何规避 javascript 多人开发函数重名问题</h3><blockquote><ul><li>使用命名空间。在 JavaScript 中，可以使用对象来作为命名空间，将函数包装在对象的属性中，这样就可以避免函数名冲突的问题</li><li>使用闭包。在 JavaScript 中，可以使用闭包来封装函数，这样就可以避免函数名冲突的问题</li><li>使用模块化开发。在 JavaScript 中，可以使用模块化开发的方式来组织代码，这样就可以避免函数名冲突的问题。例如，可以使用 CommonJS 或 ES6 模块规范来开发模块化代码</li><li>使用唯一的前缀。如果无法使用上述方法，可以考虑为所有函数名添加唯一的前缀，这样就可以避免函数名冲突的问题</li></ul></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> job do error </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> job do error </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>找工作的准备工作</title>
       <link href="/post/ebc07263.html"/>
       <url>/post/ebc07263.html</url>
